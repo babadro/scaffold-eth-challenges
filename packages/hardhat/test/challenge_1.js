@@ -9,6 +9,7 @@
 //
 
 const hre = require("hardhat");
+
 const { ethers } = hre;
 const { use, expect } = require("chai");
 const { solidity } = require("ethereum-waffle");
@@ -67,6 +68,7 @@ describe("🚩 Challenge 1: 🥩 Decentralized Staking App", function () {
 
       });
 
+      /*
       it("If enough is staked and time has passed, you should be able to complete", async function () {
 
         const timeLeft1 = await stakerContract.timeLeft()
@@ -149,13 +151,13 @@ describe("🚩 Challenge 1: 🥩 Decentralized Staking App", function () {
 
       });
       //
-
-      /*it("Should track tokens of owner by index", async function () {
+      */
+      /* it("Should track tokens of owner by index", async function () {
         const [ owner ] = await ethers.getSigners();
         const startingBalance = await myContract.balanceOf(owner.address)
         const token = await myContract.tokenOfOwnerByIndex(owner.address,startingBalance.sub(1));
         expect(token.toNumber()).to.greaterThan(0);
-      });*/
+      }); */
     });
   });
 });

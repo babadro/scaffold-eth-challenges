@@ -1,10 +1,17 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.4;
+pragma solidity ^0.8.4;
 
 import "hardhat/console.sol";
 import "./ExampleExternalContract.sol";
 
+
+/**
+* @title Stacker Contract
+* @author scaffold-eth
+* @notice A contract that allow users to stack ETH
+*/
 contract Staker {
+
     // External contract that will old stacked funds
     ExampleExternalContract public exampleExternalContract;
 
@@ -103,27 +110,5 @@ contract Staker {
             return deadline - block.timestamp;
         }
     }
-
-  // Collect funds in a payable `stake()` function and track individual `balances` with a mapping:
-  // ( Make sure to add a `Stake(address,uint256)` event and emit it for the frontend <List/> display )
-
-
-
-
-  // After some `deadline` allow anyone to call an `execute()` function
-  // If the deadline has passed and the threshold is met, it should call `exampleExternalContract.complete{value: address(this).balance}()`
-
-
-  // If the `threshold` was not met, allow everyone to call a `withdraw()` function
-
-
-  // Add a `withdraw()` function to let users withdraw their balance
-
-
-  // Add a `timeLeft()` view function that returns the time left before the deadline for the frontend
-
-
-  // Add the `receive()` special function that receives eth and calls stake()
-
 
 }
